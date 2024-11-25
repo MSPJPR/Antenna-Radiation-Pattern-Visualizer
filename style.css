@@ -1,0 +1,109 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+label {
+  font-size: 1rem;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+select,
+input[type="number"],
+input[type="color"] {
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #ff7e5f;
+  box-shadow: 0 0 5px #ff7e5f;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff7e5f;
+  color: #ffffff;
+}
+
+button:active {
+  background-color: #feb47b;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#overlay {
+  margin: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  label,
+  button {
+    font-size: 0.9rem;
+  }
+
+  select,
+  input[type="number"],
+  input[type="color"] {
+    font-size: 0.9rem;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
