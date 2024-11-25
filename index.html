@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antenna Radiation Pattern Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Antenna Radiation Pattern Visualizer</h1>
+  <label for="antennaType">Select Antenna Type:</label>
+  <select id="antennaType">
+    <option value="dipole">Dipole</option>
+    <option value="patch">Patch</option>
+    <option value="yagi">Yagi-Uda</option>
+    <option value="helical">Helical</option>
+    <option value="parabolic">Parabolic Reflector</option>
+    <option value="horn">Horn Antenna</option>
+  </select>
+  <br><br>
+  <label for="frequency">Frequency (MHz):</label>
+  <input type="number" id="frequency" value="100" min="10" max="5000">
+  <br><br>
+  <label for="gain">Gain (dBi):</label>
+  <input type="number" id="gain" value="10" min="1" max="50">
+  <br><br>
+  <label for="scaling">Scaling Factor:</label>
+  <input type="number" id="scaling" step="0.1" value="0.5" min="0.1" max="2">
+  <br><br>
+  <label for="colorPicker">Choose Graph Color:</label>
+  <input type="color" id="colorPicker" value="#0000ff">
+  <br><br>
+  <input type="checkbox" id="overlay" /> <label for="overlay">Overlay Mode</label>
+  <br><br>
+  <button id="generate">Generate Pattern</button>
+  <button id="clear">Clear Patterns</button>
+  <button id="export">Export as Image</button>
+  <canvas id="radiationPattern"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
